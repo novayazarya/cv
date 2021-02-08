@@ -1,6 +1,6 @@
 ---
 title: "Резюме"
-subtitle: "Попов Михаил"
+# subtitle: "Попов Михаил"
 output: 
   pdf_document:
     highlight: tango
@@ -22,30 +22,29 @@ library(dplyr)
 library(kableExtra)
 knitr::opts_chunk$set(echo = TRUE, cache = F)
 ```
-
 :::: {.columns}
 ::: {.column width="5%" data-latex="{0.05\textwidth}"}
 \ 
 :::
 ::: {.column width="33%" data-latex="{0.33\textwidth}"}
-
-#### 18 апреля 1982 г. Москва
+## Попов Михаил
 \
-\
-```{r figurename, echo = FALSE, out.width = '62%'}
-knitr::include_graphics("circle_masked.png")
+```{r figurename, echo = FALSE, out.width = '55%'}
+knitr::include_graphics("img/circle_masked.png")
 ```
 \
-
+\
+18 апреля 1982 г. Москва
 :::
-
 ::: {.column width="5%" data-latex="{0.05\textwidth}"}
-\ 
+\
 :::
 ::: {.column width="57%" data-latex="{0.57\textwidth}"}
 ## Аналитик данных
+
 ```{r eval = TRUE, include = FALSE}
-contacts <- cbind(c('tel', 
+contacts <- cbind(c('',
+                'tel', 
                 'e-mail',
                 'www',
                 'vk',
@@ -54,9 +53,11 @@ contacts <- cbind(c('tel',
                 'codewars',
                 'youdo',
                 'otvet.mail',
-                'docs.microsoft'
+                'docs.microsoft',
+                ''
                 ),
-              c('+7 (977) 301-75-60',
+              c('',
+                '+7 (977) 301-75-60',
                 'me@popov.mn',
                 '\\href{https://popov.mn/}{popov.mn}',
                 '\\href{https://vk.com/kozlodoev}{kozlodoev}',
@@ -65,7 +66,8 @@ contacts <- cbind(c('tel',
                 '\\href{https://www.codewars.com/users/novayazarya}{novayazarya}',
                 '\\href{https://youdo.com/u8453842}{u8453842}',
                 '\\href{https://otvet.mail.ru/profile/id269449239/answers/all/}{id269449239}',
-                '\\href{https://docs.microsoft.com/ru-ru/users/mpopov/}{mpopov}'
+                '\\href{https://docs.microsoft.com/ru-ru/users/mpopov/}{mpopov}',
+                ''
                 ))
 
 contacts <- data.frame(contacts)
@@ -73,11 +75,9 @@ names(contacts) <- c('', '')
 data <- read.csv('cv_data.csv', header = F, sep=';')
 ```
 
-
-
 ```{r results = "asis", echo = FALSE}
 kbl(contacts, booktabs = T, linesep = "", col.names = NULL, escape = F) %>%
-  kable_styling(position = "left", font_size = 9)
+  kable_styling(position = "left", font_size = 8.5)
 ```
 :::
 
@@ -89,10 +89,10 @@ data[4] <- ""
 urls = rep('', nrow(data))
 urls[31] <- url
 kbl(data[-3], longtable = T, booktabs = T, linesep = "", col.names = NULL, escape = T) %>%
-  kable_styling(full_width = F, latex_options = "striped", stripe_index = c(seq(2, 8, 2), 12, 15, seq(20, 35, 3), seq(38, 50, 2), 51, 52, seq(54, 66, 2)), bootstrap_options = c("hover", "condensed")) %>%
+    kable_styling(full_width = F, latex_options = "striped", stripe_index = c(seq(2, 8, 2), 12, 15, seq(20, 35, 3), seq(38, 50, 2), 51, 52, seq(54, 66, 2)), bootstrap_options = c("hover", "condensed", "condensed")) %>%
   column_spec(2, link = urls) %>%
-  column_spec(3, image = spec_image(ifelse(data[3] == '', 'pixel.png', 'v.png'), 45, 45)) %>%
+  column_spec(3, image = spec_image(ifelse(data[3] == '', 'img/pixel.png', 'img/cert.png'), 50, 50)) %>%
   column_spec(3, link = as.vector(unlist(data[3]))) %>%
-  column_spec(1, border_right = T) %>%
+  column_spec(1, border_right = F) %>%
   pack_rows(index=c("Навыки" = 11, "Образование" = 8, "Опыт работы" = 17, "Допобразование" = 1), latex_gap_space = "1.5em")
 ```
