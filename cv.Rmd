@@ -18,11 +18,10 @@ citecolor: blue
 inputencoding: utf8
 ---
 
-
 ```{r setup, include = FALSE}
 library(dplyr)
 library(kableExtra)
-knitr::opts_chunk$set(echo = TRUE, cache = F, dev = "ragg_png")
+knitr::opts_chunk$set(echo = TRUE, cache = F)
 ```
 :::: {.columns}
 ::: {.column width="5%" data-latex="{0.05\textwidth}"}
@@ -100,7 +99,7 @@ data[4] <- ""
 urls = rep('', nrow(data))
 urls[31] <- url
 kbl(data[-3], longtable = T, booktabs = T, linesep = "", col.names = NULL, escape = T) %>%
-    kable_styling(full_width = F, latex_options = "striped", stripe_index = c(seq(2, 8, 2), 12, 15, seq(20, 35, 3), seq(38, 50, 2), 51, seq(53, 67, 2)), bootstrap_options = c("hover", "condensed", "condensed")) %>%
+    kable_styling(full_width = F, latex_options = "striped", stripe_index = c(seq(2, 10, 2), 12, 15, seq(20, 35, 3), seq(37, 50, 2), seq(52, 67, 2)), bootstrap_options = c("hover", "condensed", "condensed")) %>%
   column_spec(2, link = urls) %>%
   column_spec(3, image = spec_image(ifelse(data[3] == '', 'img/pixel.png', 'img/cert.png'), 50, 50)) %>%
   column_spec(3, link = as.vector(unlist(data[3]))) %>%
