@@ -1,12 +1,12 @@
 ;Поисковая оптимизация SEO и продвижение сайтов;
 ;Анализ данных, ETL, ML: SQL, Python, R, Microsoft Excel;
 ;Контекстная реклама: Yandex Direct, Google Ads;
-;Программирование: Python (Pandas, Numpy, Bokeh, Scikit-Learn, NLTK), R;
+;Программирование: Python (Pandas, Numpy, Scipy, Scikit-Learn, NLTK), R;
 ;Языки разметки: HTML, XML, CSS;
-;СУБД: PostgreSQL, MySQL;
+;СУБД: PostgreSQL, MySQL, ClickHouse;
 ;Системы веб-аналитики: Yandex Metrika, Google Analytics;
-;BI и дешбординг: Microsoft Power BI, Google Data Studio;
-;API: Yandex (Webmaster, Metrika, Collections), VK, Text.ru;
+;BI и дешбординг: Microsoft Power BI, Google Data Studio, Tableau;
+;API: Yandex (Webmaster, Metrika), VK, Text.ru;
 ;CRM: Bitrix24;
 ;Водительские права: категории B, C;
 2007;МГУП им. И. Федорова, Москва;
@@ -17,8 +17,8 @@
 ;Кафедра информационных систем;
 ;Информационные системы в технике и технологиях, очное отделение;
 ;Инженер;
-2016–н.в.;G-STORE LLC (RU);
-;Консультант по поисковой оптимизации;
+2017–н.в.;G-STORE LLC (RU);
+;Веб-аналитик, консультант по поисковой оптимизации;
 ;Консалтинг, анализ данных, дешбординг;
 2017–2020;Онлайн-журнал Aromo.ru;
 ;SEO-специалист;
@@ -48,8 +48,9 @@
 ;«Введение в базы данных», Stepik;
 ;Microsoft Docs Learn;https://docs.microsoft.com/ru-ru/users/mpopov/achievements
 ;«Основы обработки и анализа данных», docs.microsoft.com;
-;«Моделирование данных в Power BI»;
-;«Визуализация данных в Power BI»;
+;«Моделирование данных в Power BI», «Визуализация данных в Power BI»;
+;НИУ ВШЭ, ЦНО ФКН;
+;«Python для автоматизации и анализа данных»;
 ;Университет «Высшая школа экономики» & Yandex School of Data;
 ;«Python для анализа данных», Coursera;
 ;АНО ДПО «Корпоративный университет Сбербанка»;

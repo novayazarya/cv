@@ -15,12 +15,14 @@ documentclass: article
 linkcolor: darkblue
 urlcolor: blue
 citecolor: blue
+inputencoding: utf8
 ---
+
 
 ```{r setup, include = FALSE}
 library(dplyr)
 library(kableExtra)
-knitr::opts_chunk$set(echo = TRUE, cache = F)
+knitr::opts_chunk$set(echo = TRUE, cache = F, dev = "ragg_png")
 ```
 :::: {.columns}
 ::: {.column width="5%" data-latex="{0.05\textwidth}"}
@@ -35,9 +37,10 @@ knitr::include_graphics("img/circle_masked.png")
 \
 \
 18 апреля 1982 г. Москва
+\
 :::
 ::: {.column width="5%" data-latex="{0.05\textwidth}"}
-\
+\ 
 :::
 ::: {.column width="57%" data-latex="{0.57\textwidth}"}
 ## Аналитик данных
@@ -69,7 +72,6 @@ contacts <- cbind(c('',
                 '\\href{https://docs.microsoft.com/ru-ru/users/mpopov/}{mpopov}',
                 ''
                 ))
-
 contacts <- data.frame(contacts)
 names(contacts) <- c('', '')
 data <- read.csv('cv_data.csv', header = F, sep=';')
@@ -80,16 +82,25 @@ kbl(contacts, booktabs = T, linesep = "", col.names = NULL, escape = F) %>%
   kable_styling(position = "left", font_size = 8.5)
 ```
 :::
-
 ::::
 ## 
+::: {.column width="5%" data-latex="{0.05\textwidth}"}
+\ 
+:::
+::: {.column width="95%" data-latex="{0.95\textwidth}"}
+Уверенно владею Python и основными библиотеками для DA/DS. Использую Jupiter Notebook, Git; Airflow — для автоматизации задач; Tableau, Power BI, Data Studio — для визуализации и отчетности.
+
+Понимаю и умею рассчитывать продуктовые метрики: CTR, CPA, DAU, ARPU, Retention, CAC, Churn, LTV.
+
+Статистика, A/B-тестирование, Bootstrapping, ABC/XYZ/RFM-анализ.
+:::
 ```{r results = "asis", echo = FALSE}
 url <- "https://zachestnyibiznes.ru/company/ip/308524716200015_524705764087_Popov-Mihail-Nikolaevich"
 data[4] <- ""
 urls = rep('', nrow(data))
 urls[31] <- url
 kbl(data[-3], longtable = T, booktabs = T, linesep = "", col.names = NULL, escape = T) %>%
-    kable_styling(full_width = F, latex_options = "striped", stripe_index = c(seq(2, 8, 2), 12, 15, seq(20, 35, 3), seq(38, 50, 2), 51, 52, seq(54, 66, 2)), bootstrap_options = c("hover", "condensed", "condensed")) %>%
+    kable_styling(full_width = F, latex_options = "striped", stripe_index = c(seq(2, 8, 2), 12, 15, seq(20, 35, 3), seq(38, 50, 2), 51, seq(53, 67, 2)), bootstrap_options = c("hover", "condensed", "condensed")) %>%
   column_spec(2, link = urls) %>%
   column_spec(3, image = spec_image(ifelse(data[3] == '', 'img/pixel.png', 'img/cert.png'), 50, 50)) %>%
   column_spec(3, link = as.vector(unlist(data[3]))) %>%
