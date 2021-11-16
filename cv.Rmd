@@ -28,14 +28,14 @@ knitr::opts_chunk$set(echo = TRUE, cache = F)
 \ 
 :::
 ::: {.column width="33%" data-latex="{0.33\textwidth}"}
-## Попов Михаил
+## Михаил Попов
 \
-```{r figurename, echo = FALSE, out.width = '55%'}
+```{r figurename, echo = FALSE, out.width = '50%'}
 knitr::include_graphics("img/circle_masked.png")
 ```
 \
 \
-18 апреля 1982 г. Москва
+Москва,  +7 (977) 301-75-60
 \
 :::
 ::: {.column width="5%" data-latex="{0.05\textwidth}"}
@@ -46,7 +46,6 @@ knitr::include_graphics("img/circle_masked.png")
 
 ```{r eval = TRUE, include = FALSE}
 contacts <- cbind(c('',
-                'tel', 
                 'e-mail',
                 'www',
                 'vk',
@@ -59,7 +58,6 @@ contacts <- cbind(c('',
                 ''
                 ),
               c('',
-                '+7 (977) 301-75-60',
                 'me@popov.mn',
                 '\\href{https://popov.mn/}{popov.mn}',
                 '\\href{https://vk.com/kozlodoev}{kozlodoev}',
